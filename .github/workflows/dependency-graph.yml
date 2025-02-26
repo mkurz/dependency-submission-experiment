@@ -28,6 +28,6 @@ jobs:
       - uses: sbt/setup-sbt@v1
       - uses: mkurz/sbt-dependency-submission@manifest-prefix
         with:
-          manifest-prefix: '3.x - '
-          sha-override: 'da3026fbb93f954dfd77bf68214ca857b189fba3'
+          manifest-prefix: '3.0.x - '
+          sha-override: '7b03cc539567561adae01147749795a37c80da28'
           sbt-plugin-version: '3.2.0-SNAPSHOT'
