@@ -5,10 +5,12 @@ ThisBuild / organizationName := "example"
 
 lazy val sub1 = (project in file("subproject1"))
   .settings(
+    libraryDependencies += "commons-io" % "commons-io" % "2.11.0", // has vulnerabilities
   )
 
 lazy val sub2 = (project in file("subproject2"))
   .settings(
+    libraryDependencies += "org.eclipse.jetty" % "jetty-http" % "12.0.11", // has vulnerabilities
   )
 
 lazy val root = (project in file("."))
