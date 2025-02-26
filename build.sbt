@@ -5,7 +5,6 @@ ThisBuild / organizationName := "example"
 
 lazy val sub1 = (project in file("subproject1"))
   .settings(
-    libraryDependencies += "commons-io" % "commons-io" % "2.11.0", // has vulnerabilities
   )
 
 lazy val sub2 = (project in file("subproject2"))
@@ -16,4 +15,5 @@ lazy val sub2 = (project in file("subproject2"))
 lazy val root = (project in file("."))
   .settings(
     name := "Dependency Submission Experiment",
+    libraryDependencies += "io.netty" % "netty-handler" % "4.1.115.Final", // has vulnerabilities
   ).aggregate(sub1, sub2)
