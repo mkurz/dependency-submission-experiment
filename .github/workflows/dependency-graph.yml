@@ -28,7 +28,7 @@ jobs:
       - uses: sbt/setup-sbt@v1
       - uses: mkurz/sbt-dependency-submission@manifest-prefix
         with:
-          correlator: '3.0.x5'
+          correlator: '3.0.x6'
           sha-override: '7b03cc539567561adae01147749795a37c80da28'
-          manifest-prefix: '3.0.x ~-~ '
+          manifest-prefix: '3.0.x --~ '
           sbt-plugin-version: '3.2.0-SNAPSHOT'
