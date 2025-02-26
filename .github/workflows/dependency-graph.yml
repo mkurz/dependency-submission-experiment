@@ -28,6 +28,7 @@ jobs:
       - uses: sbt/setup-sbt@v1
       - uses: mkurz/sbt-dependency-submission@manifest-prefix
         with:
+          correlator: '3.x'
           manifest-prefix: '3.x - '
           ref-override: 'refs/heads/main'
           sbt-plugin-version: '3.2.0-SNAPSHOT'
