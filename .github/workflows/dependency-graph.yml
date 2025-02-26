@@ -30,6 +30,6 @@ jobs:
         with:
           correlator: '3.0.x4'
           sha-override: '7b03cc539567561adae01147749795a37c80da28'
-          ref-override: 'refs/foobar'
+          ref-override: 'refs/blabla'
           manifest-prefix: '3.0.x ~~ '
           sbt-plugin-version: '3.2.0-SNAPSHOT'
