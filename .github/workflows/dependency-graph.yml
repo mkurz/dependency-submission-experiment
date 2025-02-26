@@ -27,3 +27,5 @@ jobs:
           java-version: '17'
       - uses: sbt/setup-sbt@v1
       - uses: scalacenter/sbt-dependency-submission@v3
+        with:
+          correlator: "Dependency Graph_dependency-graph___scalacenter_sbt-dependency-submission_3.0.x"
