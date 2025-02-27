@@ -28,6 +28,9 @@ jobs:
       - uses: sbt/setup-sbt@v1
       - uses: mkurz/sbt-dependency-submission@manifest-prefix
         with:
-          manifest-prefix: 'main3 - '
-          sha-override: 'da3026fbb93f954dfd77bf68214ca857b189fba3'
+          correlator: '${github.context.workflow}_${github.context.job}_${github.context.action}_${github.ref_name}'
+          manifest-prefix: '${github.ref_name} ~ '
+          # By hardcoding the sha and ref, we ensure that all branches update the same snapshots, differing only by their correlator.
+          sha-overvride: '7b03cc539567561adae01147749795a37c80da28'
+          ref-override: 'refs/heads/main' #  2025-02-27: GitHub ignores it, but to be future-proof, let's hardcode it (not using github.event.repository.default_branch)
           sbt-plugin-version: '3.2.0-SNAPSHOT'
