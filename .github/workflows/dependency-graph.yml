@@ -2,7 +2,7 @@ name: Dependency Graph
 on:
   push:
     branches:
-      - 3.4.x
+      - 3.5.x
 
 concurrency:
   # Only run once for latest commit per ref and cancel other (previous) runs.
@@ -29,7 +29,7 @@ jobs:
       - uses: mkurz/sbt-dependency-submission@manifest-prefix
         with:
           correlator: '${{ github.workflow }}_${{ github.job }}_${{ github.action }}-branch_${{ github.ref_name }}'
-          manifest-prefix: '${{ github.ref_name}}-_-_-_-_'
+          manifest-prefix: '${{ github.ref_name}}----'
           # By hardcoding the sha and ref, we ensure that all branches update the same snapshots, differing only by their correlator.
           sha-override: '70bb36777e5014185af44249747660c8e873893f'
           ref-override: 'refs/heads/main' #  2025-02-27: GitHub ignores it, but to be future-proof, let's hardcode it (not using github.event.repository.default_branch)
