@@ -6,5 +6,4 @@ ThisBuild / organizationName := "example"
 lazy val root = (project in file("."))
   .settings(
     name := "Dependency Submission Experiment",
-    libraryDependencies += "ch.qos.logback" % "logback-core" % "1.5.12", // has vulnerabilities
   )
