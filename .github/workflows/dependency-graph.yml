@@ -27,7 +27,7 @@ jobs:
           java-version: '17'
       - uses: sbt/setup-sbt@v1
       - name: Set current timestamp (to the minute)
-        run: echo "TIMESTAMP_MINUTE=$(date +'%Y-%m-%d %H:%M')" >> $GITHUB_ENV
+        run: echo "TIMESTAMP_MINUTE=$(date +'%Y-%m-%d %H-%M')" >> $GITHUB_ENV
       - uses: mkurz/sbt-dependency-submission@manifest-prefix
         with:
           correlator: '${{ github.workflow }}_${{ github.job }}_${{ github.action }}-branch_${{ github.ref_name }}'
